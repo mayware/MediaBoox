@@ -383,6 +383,7 @@ body {
 }
 
 .banner-block {
+    position: relative;
     height: 350px;
     width: 250px;
     margin-bottom: 3.5rem;
@@ -402,6 +403,69 @@ body {
 
 .banner-img:hover {
     box-shadow: 0px 0px 35px #0d3b66;
+    transition: 200ms ease-in-out;
+}
+
+.overlay-bot {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.banner-link:hover .overlay-bot {
+    opacity: 1;
+}
+
+.overlay-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.banner-link:hover .overlay-top {
+    opacity: 1;
+}
+
+.save-book-btn {
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    background-color: #0d3b66;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #dee2e6;
+    transition: 200ms ease-in-out;
+}
+
+.save-book-btn:hover {
+    background-color: #e63946;
+    color: #101010;
     transition: 200ms ease-in-out;
 }
 
@@ -434,12 +498,22 @@ body {
     transition: 200ms ease-in-out;
 }
 
-.show-more.open {
+.expand-btn.open {
     display: none;
 }
 
 .show-less {
     display: none;
+    align-items: center;
+    padding: .5rem .1rem .5rem 0.5rem;
+    border: 2px solid #343a40;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    color: #d9d9d9;
+    transition: 200ms ease-in-out;
 }
 
 .show-less.open {
@@ -596,8 +670,6 @@ body {
     text-align: center;
     color: #f4f4f4;
 }
-
-.footer-left {}
 
 .social-links {
     display: flex;

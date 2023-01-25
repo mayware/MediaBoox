@@ -4,7 +4,7 @@ function sideToggler() {
 }
 
 function blockExpander() {
-    document.querySelector('.show-more').classList.toggle('open');
+    document.querySelector('.expand-btn').classList.toggle('open');
     document.querySelector('.show-less').classList.toggle('open');
     document.querySelector('.arrow-icon-down').classList.toggle('close');
     document.querySelector('.arrow-icon-up').classList.toggle('open');
