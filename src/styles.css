@@ -6,6 +6,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --fullGrid: 1 / 1 / -1 / -1;
 }
@@ -21,8 +25,6 @@
 }
 
 @-moz-keyframes fadein {
-
-    /* Firefox */
     from {
         opacity: 0;
     }
@@ -33,8 +35,6 @@
 }
 
 @-webkit-keyframes fadein {
-
-    /* Safari and Chrome */
     from {
         opacity: 0;
     }
@@ -45,8 +45,6 @@
 }
 
 @-o-keyframes fadein {
-
-    /* Opera */
     from {
         opacity: 0;
     }
@@ -56,7 +54,6 @@
     }
 }
 
-/*  */
 
 
 body {
@@ -133,6 +130,8 @@ body {
 .header-item {
     text-decoration: none;
     color: #d9d9d9;
+    font-size: 16px;
+    font-weight: 700;
     margin: .5rem;
     padding: .5rem;
     border: 1px solid transparent;
@@ -145,9 +144,78 @@ body {
     transition: 200ms ease-in-out;
 }
 
+#readingLink {
+    border: 1px solid #0ead69;
+    transition: 200ms ease-in-out;
+}
+
+#readingLink:hover {
+    border: 1px solid #fc2f00;
+    transition: 200ms ease-in-out;
+}
+
 .header-right {
     display: flex;
     align-items: center;
+}
+
+.search-box {
+    margin-right: 1.5rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.search-input {
+    padding: .5rem .5rem .5rem 1rem;
+    height: 35px;
+    width: 225px;
+    font-size: 14px;
+    letter-spacing: .5mm;
+    border-top: 1px solid #adb5bd;
+    border-bottom: 1px solid #adb5bd;
+    border-left: 1px solid #adb5bd;
+    border-right: 1px solid #adb5bd;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background: none;
+    color: #adb5bd;
+    transition: 200ms ease-in-out;
+}
+
+.search-input:focus {
+    outline: none;
+    border: 1px solid #1597BB;
+    transition: 200ms ease-in-out;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    padding: .5rem;
+    height: 35px;
+    width: 55px;
+    text-decoration: none;
+    border-top: 1px solid #adb5bd;
+    border-bottom: 1px solid #adb5bd;
+    border-left: none;
+    border-right: 1px solid #adb5bd;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: none;
+    color: #adb5bd;
+    transition: 200ms ease-in-out;
+}
+
+.search-btn:hover {
+    background-color: #1597BB;
+    transition: 200ms ease-in-out;
+    color: #000;
 }
 
 .sign-in-btn {
@@ -221,7 +289,7 @@ body {
     cursor: pointer;
     text-decoration: none;
     padding: .5rem 5rem .5rem 5rem;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: .8mm;
     color: #dee2e6;
@@ -239,34 +307,21 @@ body {
     transition: 200ms ease-in-out;
 }
 
-.section-inner {
-    border-top: 1px solid #202020;
-}
-
 .intro-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 15rem;
+    height: 7.1rem;
     width: 100%;
     padding: 0 2rem 0 2rem;
-    --s: 50px;
-    --c: #191b22;
-    --_s: calc(2*var(--s)) calc(2*var(--s));
-    --_g: 35.36% 35.36% at;
-    --_c: #0000 66%, #20222a 68% 70%, #0000 72%;
-    background:
-        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    border-top: 1px solid #202020;
 }
 
 .intro-middle {
-    padding: 1.5rem;
-    color: #adb5bd;
+    padding: .5rem;
+    color: #dee2e6;
+    background-color: #101010;
+    border-radius: 45px;
     font-size: 24px;
     font-weight: 700;
     letter-spacing: .7mm;
@@ -279,14 +334,41 @@ body {
     filter: drop-shadow(0 0 0.75rem #9e0059);
 }
 
+.genre-box {
+    padding: .5rem 0 .5rem 0;
+}
+
+.genres-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d3557;
+}
+
+.genre-btn {
+    cursor: pointer;
+    padding: .5rem;
+    font-size: 16px;
+    border: 2px solid transparent;
+    background-color: #202020;
+    border-radius: 5px;
+    color: #dee2e6;
+    margin: .3rem;
+    transition: 200ms ease-in-out;
+}
+
+.genre-btn:hover {
+    border: 2px solid #adb5bd;
+    transition: 200ms ease-in-out;
+}
+
 .banners-box {
-    background: url('./images/bg/bg.jpg');
+    background: url('../assets/images/bg/bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* gap: 10px; */
     justify-items: center;
     background-color: #151515;
     padding: 3rem 1rem 3rem 1rem;
@@ -301,9 +383,9 @@ body {
 }
 
 .banner-block {
-    height: 415px;
-    width: 320px;
-    margin-bottom: 3rem;
+    height: 350px;
+    width: 250px;
+    margin-bottom: 3.5rem;
 }
 
 .main-bannes {
@@ -323,9 +405,8 @@ body {
     transition: 200ms ease-in-out;
 }
 
-.expand-btn-block {
-    display: grid;
-    grid-template-columns: 1fr;
+.exband-block {
+    box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
 }
 
 .expander {
@@ -365,7 +446,6 @@ body {
     display: flex;
 }
 
-
 .arrow-icon-down {
     margin: 0 0 0 .3rem;
 }
@@ -388,7 +468,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     gap: 10px;
-    height: 15rem;
+    height: 25rem;
     width: 100%;
     padding: 2.5rem 1rem 2.5rem 1rem;
     background-color: #191919;
@@ -403,7 +483,6 @@ body {
     padding: 1rem;
     color: #adb5bd;
     width: 100%;
-    /* text-align: center; */
 }
 
 .contact-box {
@@ -436,7 +515,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid #343434; */
 }
 
 .contact-logo {
@@ -449,8 +527,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* padding: .5rem; */
-    /* border: 1px solid rebeccapurple; */
 }
 
 .contact-input {
@@ -475,7 +551,7 @@ body {
     padding: .5rem;
     resize: none;
     width: 100%;
-    margin: .2rem 0 .2rem 0;
+    margin: .2rem;
     border: 1px solid #423F3E;
     background-color: #2B2B2B;
     color: #dee2e6;
