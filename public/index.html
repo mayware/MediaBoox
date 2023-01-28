@@ -21,8 +21,9 @@
     <header class="header">
         <div class="header-left">
             <div class="sidebar-toggler">
-                <button class="sidebar-btn" data-menu-icon-btn onclick="sideToggler()">
-                    <span class="material-symbols-outlined">menu</span>
+                <button class="sidebar-btn" data-menu-icon-btn onclick="sidenavToggler()">
+                    <span class="material-symbols-outlined burger-btn">menu</span>
+                    <span class="material-symbols-outlined close-btn">close</span>
                 </button>
             </div>
             <div class="header-title">
@@ -55,16 +56,35 @@
             <button class="sign-in-btn">Sign in</button>
         </div>
     </header>
+    <aside class="sidenav-overlay">
+        <div class="sidenav-inner">
+            <ul class="sidenav-list">
+                <li class="sidenav-list-item">
+                    <a href="/" class="sidenav-item">Home</a>
+                </li>
+                <li class="sidenav-list-item">
+                    <a href="/about" class="sidenav-item">About</a>
+                </li>
+                <li class="sidenav-list-item">
+                    <a href="/contact" class="sidenav-item">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
     <div class="container">
         <div class="content">
             <div class="video-banner">
-                <video src="../assets/videos/video.mp4" class="video-bg" autoplay loop playsinline muted></video>
-                <div class="video-overlay">
-                    <div class="intro-bg">
-                        <div class="welcome-title">Welcome to MediaBoox</div>
-                        <a href="#start" class="start-btn">Start</a>
+                <div class="bg-video-box">
+                    <video src="../assets/videos/video.mp4" class="video-bg" autoplay loop playsinline muted></video>
+                    <div class="video-overlay">
+                        <div class="welcome-box">
+                            <div class="welcome-title">Welcome to MediaBoox</div>
+                            <a href="#start" class="start-btn">Start</a>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <section class="section">
                 <div class="section-inner">
@@ -103,7 +123,6 @@
                                 <img class="banner-img" src="../assets/images/banners/books/2.jpg" alt="banner-image">
                                 <div class="overlay-bot">Misery</div>
                             </a>
-
                         </div>
                         <div class="banner-block">
                             <a href="#" class="banner-link">
@@ -221,9 +240,9 @@
                             <span class="contact-title-text">Send us a message, we are happy to hear your complaints and
                                 propositions.</span>
                         </div>
-                        <div class="contatc-icon">
-                            <!-- <img src="./images/bg/1.png" alt="contact-ico" class="contact-logo"> -->
-                        </div>
+                        <!-- <div class="contatc-icon">
+                            <img src="./images/bg/1.png" alt="contact-ico" class="contact-logo">
+                        </div> -->
                         <form class="contact-form">
                             <input type="text" class="contact-input" placeholder="Write your name.." required>
                             <textarea class="contact-textarea" cols="30" rows="10" placeholder="Write your message.."
